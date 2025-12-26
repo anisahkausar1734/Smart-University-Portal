@@ -1,0 +1,154 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f1eef5;
+}
+
+/* Header */
+header {
+    background-color: #003366;
+    color: white;
+    padding: 15px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-right: 15px;
+    font-weight: bold;
+}
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* Background image section */
+.banner {
+    height: 280px;
+    background-image: url('images/sup.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+/* Layout */
+.container {
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+}
+
+.content {
+    flex: 3;
+    background: rgb(227, 224, 230);
+    padding: 20px;
+    border-radius: 6px;
+}
+
+.sidebar {
+    flex: 1;
+    background: #eae9e9;
+    padding: 20px;
+    border-radius: 6px;
+}
+
+.sidebar a {
+    text-decoration: none;
+    color: #003366;
+}
+
+/* Footer */
+footer {
+    background-color: #eee;
+    text-align: center;
+    padding: 10px;
+    margin-top: 20px;
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+
+    nav a {
+        margin: 8px 0;
+    }
+}
+/* Mega menu container */
+.mega-menu {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    padding: 40px 60px;
+    background: #eef1f3;
+    flex-wrap: wrap;
+}
+
+/* Columns */
+.mega-column {
+    min-width: 180px;
+}
+
+.mega-column h3 {
+    font-size: 20px;
+    margin-bottom: 15px;
+    color: #111;
+}
+
+.mega-column a {
+    display: block;
+    text-decoration: none;
+    color: #333;
+    margin-bottom: 12px;
+    font-size: 15px;
+}
+
+.mega-column a:hover {
+    color: #4e477d;
+}
+
+/* Right-side buttons */
+.mega-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: flex-start;
+}
+
+.btn-outline {
+    padding: 14px 22px;
+    border: 2px solid #1a166b;
+    color: #1a166b;
+    text-decoration: none;
+    font-weight: bold;
+    text-align: center;
+    width: 230px;
+}
+
+.btn-outline:hover {
+    background: #333360;
+    color: white;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .mega-menu {
+        flex-direction: column;
+    }
+
+    .mega-actions {
+        align-items: flex-start;
+    }
+}
+@media (max-width: 500px) {
+    .mega-column {
+        min-width: 100%;
+    }
+
+    .btn-outline {
+        width: 100%;
+        text-align: center;
+    }
+}
+h2{
+    color: #00274e;
+}

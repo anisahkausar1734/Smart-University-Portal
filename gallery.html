@@ -1,1 +1,213 @@
-<!DOCTYPE html><html><body><h1>Gallery</h1></body></html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Photo Gallery | Smart University</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+        }
+
+        /* HEADER */
+        header {
+            background-color: #003366;
+            color: white;
+            padding: 15px;
+        }
+
+        header img {
+            float: right;
+            width: 170px;
+            margin: 10px;
+        }
+
+        nav a {
+            color: white;
+            margin-right: 18px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            text-decoration:underline;
+        }
+
+        /* PAGE TITLE BAR */
+        .page-title {
+            background: #080a3f;
+            color: white;
+            padding: 25px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .page-title h1 {
+            margin: 0;
+            font-size: 28px;
+        }
+
+        .breadcrumb {
+            font-size: 14px;
+            color: #ddd;
+        }
+
+        /* GALLERY SECTION */
+        .gallery-container {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+        }
+
+        .gallery-item {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+            position: relative;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+        }
+
+        .count-badge {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: rgba(0,0,0,0.7);
+            color: white;
+            padding: 5px 10px;
+            font-size: 14px;
+            border-radius: 4px;
+        }
+
+        .caption {
+            padding: 12px;
+            font-weight: bold;
+            text-align: center;
+            background: #fff;
+        }
+
+        footer {
+            background-color: #eee;
+            text-align: center;
+            padding: 12px;
+            margin-top: 40px;
+        }
+
+        @media (max-width: 600px) {
+            header {
+                text-align: center;
+            }
+
+            header img {
+                float: none;
+                margin: 10px auto;
+                display: block;
+            }
+
+            .page-title {
+                flex-direction: column;
+                gap: 10px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <img src="images/mituni.png" alt="Smart University Logo">
+    <h1>Smart University</h1>
+    <p>Knowledge • Innovation • Excellence</p>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="programs.html">Programs</a>
+        <a href="admissions.html">Admissions</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+</header>
+
+<!-- PAGE TITLE BAR -->
+<div class="page-title">
+    <h1>Photo Gallery</h1>
+    <div class="breadcrumb"></div>
+</div>
+
+<!-- GALLERY -->
+<section class="gallery-container">
+    <div class="gallery-grid">
+
+        <div class="gallery-item">
+            <span class="count-badge">8</span>
+            <img src="images/library.jpg" alt="Gallery Image 1">
+            <div class="caption">Library</div>
+        </div>
+
+        <div class="gallery-item">
+            <span class="count-badge">14</span>
+            <img src="images/campus.jpg" alt="Gallery Image 2">
+            <div class="caption">Campus</div>
+        </div>
+
+        <div class="gallery-item">
+            <span class="count-badge">16</span>
+            <img src="images/sports.jpg" alt="Gallery Image 3">
+            <div class="caption">University Sports Meet</div>
+        </div>
+
+        <div class="gallery-item">
+            <span class="count-badge">10</span>
+            <img src="images/fest.jpg" alt="Gallery Image 4">
+            <div class="caption">Cultural Fest</div>
+        </div>
+
+        <div class="gallery-item">
+            <span class="count-badge">8</span>
+            <img src="images/researchsym.jpg" alt="Gallery Image 5">
+            <div class="caption">Research Symposium</div>
+        </div>
+
+        <div class="gallery-item">
+            <span class="count-badge">12</span>
+            <img src="images/independence.jpg" alt="Gallery Image 6">
+            <div class="caption">79th Independence Day Celebration</div>
+        </div>
+
+            <div class="gallery-item">
+            <span class="count-badge">12</span>
+            <img src="images/hack.webp" alt="Gallery Image 6">
+            <div class="caption">Gen AI Hackathon</div>
+        </div>
+
+            <div class="gallery-item">
+            <span class="count-badge">12</span>
+            <img src="images/hostel.avif" alt="Gallery Image 6">
+            <div class="caption">Hostel</div>
+        </div>
+
+    </div>
+</section>
+
+<footer>
+    <p>&copy; 2026 Smart University</p>
+</footer>
+
+</body>
+</html>
