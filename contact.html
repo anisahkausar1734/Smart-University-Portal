@@ -69,20 +69,21 @@ nav a:hover {
     background: #f2b200;
 }
 
-/* CONTENT */
-.container {
-    background-color: #dfd5d5;
-    max-width: 1100px;
-    margin: 20px;
-    margin-top: 50px;
-    border-radius: 8px;
-    padding: 15px 20px;
-}
+        .container {
+            display: flex;
+            gap: 20px;
+            padding: 20px;
+        }
+        .content {
+            flex: 3;
+            background: #e6dfdf;
+            padding: 20px;
+            border-radius: 6px;
+        }
 
-.section-title {
-    font-size: 28px;
-    margin-top: 50px;
-    margin-bottom: 20px;
+
+section{
+padding: 20px;
 }
  
 
@@ -100,86 +101,82 @@ nav a:hover {
     line-height: 1.6;
 }
 
-/* FOOTER */
 footer {
-    background-color: #eee;
+    background-color: #d8d1d1;
     text-align: center;
-    padding: 12px;
-    margin-top: 30px;
+    padding: 10px;
+    margin-top: 20px;
 }
 
-/* MOBILE */
-@media (max-width: 768px) {
-    .banner-text {
-        padding-left: 20px;
-    }
-
-    .banner-text h1 {
-        font-size: 28px;
-    }
+.footer {
+    background-color: #cad0d2;
+    color: rgb(19, 16, 16);
+    padding-top: 40px;
 }
-.quick-links {
-    background: #eef1f3;
-    padding: 50px 20px;
+
+.mega-menu {
     display: flex;
-    flex-wrap: wrap;
-    gap: 60px;
-    justify-content: space-between;
-}
-.quick-link {
-        display: flex;
     justify-content: space-between;
     gap: 40px;
-    padding: 40px 60px;
-    background: #eef1f3;
+    padding: 10px 60px 35px;
+    background: #cad0d2;
     flex-wrap: wrap;
+    margin-top: 0;
 }
 
-.ql-column h3 {
+/* Columns */
+.mega-column {
+    min-width: 180px;
+}
+
+.mega-column h3 {
     font-size: 20px;
     margin-bottom: 15px;
     color: #111;
 }
 
-.ql-column p {
-    margin: 8px 0;
+.mega-column a {
+    display: block;
+    text-decoration: none;
     color: #333;
-    cursor: pointer;
+    margin-bottom: 12px;
+    font-size: 15px;
 }
 
-.ql-column p:hover {
-    text-decoration: underline;
+.mega-column a:hover {
+    color: #4e477d;
 }
 
-.ql-actions {
+/* Right-side buttons */
+.mega-actions {
+    margin-top: 30px;
     display: flex;
     flex-direction: column;
     gap: 20px;
+    align-items: flex-start;
 }
 
-.ql-btn {
-    border: 2px solid #1a1a8a;
-    color: #1a1a8a;
+.btn-outline {
     padding: 14px 22px;
-    text-align: center;
-    font-weight: bold;
+    border: 2px solid #1a166b;
+    color: #1a166b;
     text-decoration: none;
+    font-weight: bold;
+    text-align: center;
     width: 230px;
 }
 
-.ql-btn:hover {
-    background: #1a1a8a;
+.btn-outline:hover {
+    background: #333360;
     color: white;
 }
 
-/* Responsive */
-@media (max-width: 900px) {
-    .quick-links {
-        flex-direction: column;
-        gap: 30px;
-    }
+.footer-bottom {
+    background-color: #cad0d2;
+    text-align: center;
+    padding: 15px;
+    font-size: 14px;
 }
-
 
 </style>
 </head>
@@ -211,9 +208,11 @@ footer {
 </div>
 
 <!-- Content -->
-<div class="container">
+ <main class="container">
+<div class="content">
+    <section>
 
-    <h2 class="section-title">Important Contacts</h2>
+    <h2>Important Contacts</h2>
 
     <div class="contact-box">
         <h3>Registrar</h3>
@@ -251,48 +250,56 @@ footer {
             Email: alumni@smartuniversity.edu
         </p>
     </div>
+    </section>
+    </main>
 
-    <!-- QUICK LINKS SECTION -->
-     <section class="quick-link">
-<div class="quick-links">
+<footer class="footer">
 
-    <div class="ql-column">
-        <h3>Study</h3>
-        <p>Programs</p>
-        <p>Admissions</p>
-        <p>Dates and Deadlines</p>
+    <section class="mega-menu">
+
+        <div class="mega-column">
+            <h3>Study</h3>
+            <a href="#">Programs</a>
+            <a href="#">Admissions</a>
+            <a href="#">Dates and Deadlines</a>
+        </div>
+
+        <div class="mega-column">
+            <h3>Research</h3>
+            <a href="#">Directorate of Research</a>
+            <a href="#">Research Collaborations</a>
+            <a href="#">SU Research Portal</a>
+        </div>
+
+        <div class="mega-column">
+            <h3>Discover</h3>
+            <a href="#">About Us</a>
+            <a href="#">Disclaimer</a>
+            <a href="#">Career</a>
+            <a href="#">Leadership</a>
+            <a href="#">Ranking & Recognition</a>
+        </div>
+
+        <div class="mega-column">
+            <h3>Related Links</h3>
+            <a href="#">Terms and Conditions</a>
+            <a href="#">Contact Us</a>
+            <a href="#">Application Status</a>
+            <a href="#">Policies</a>
+            <a href="#">Privacy & Cookie Policy</a>
+        </div>
+
+        <div class="mega-actions">
+            <a class="btn-outline" href="forms.html">APPLY FOR ADMISSIONS</a>
+            <a class="btn-outline" href="#">DOWNLOAD PROSPECTUS</a>
+        </div>
+
+    </section>
+
+    <div class="footer-bottom">
+        <p>&copy; 2026 Smart University</p>
     </div>
 
-    <div class="ql-column">
-        <h3>Research</h3>
-        <p>Directorate of Research</p>
-        <p>Research Collaborations</p>
-        <p>SU Research Portal</p>
-    </div>
-
-    <div class="ql-column">
-        <h3>Discover</h3>
-        <p>About Us</p>
-        <p>Disclaimer</p>
-        <p>Career</p>
-        <p>Leadership</p>
-        <p>Ranking & Recognition</p>
-    </div>
-
-    <div class="ql-column">
-        <h3>Related Links</h3>
-        <p>Terms and Conditions</p>
-        <p>Contact Us</p>
-        <p>Application Status</p>
-        <p>Policies</p>
-        <p>Privacy & Cookie Policy</p>
-    </div>
-
-</div>
-</section>
-
-<footer>
-    <p>&copy; 2026 Smart University</p>
 </footer>
 
 </body>

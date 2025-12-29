@@ -57,30 +57,26 @@ nav a:hover {
 
 /* Footer */
 footer {
-    background-color: #eee;
+    background-color: #d8d1d1;
     text-align: center;
     padding: 10px;
     margin-top: 20px;
 }
 
-/* Mobile responsive */
-@media (max-width: 768px) {
-    .container {
-        flex-direction: column;
-    }
-
-    nav a {
-        margin: 8px 0;
-    }
+.footer {
+    background-color: #cad0d2;
+    color: rgb(19, 16, 16);
+    padding-top: 40px;
 }
-/* Mega menu container */
+
 .mega-menu {
     display: flex;
     justify-content: space-between;
     gap: 40px;
-    padding: 40px 60px;
-    background: #eef1f3;
+    padding: 10px 60px 35px;
+    background: #cad0d2;
     flex-wrap: wrap;
+    margin-top: 0;
 }
 
 /* Columns */
@@ -108,6 +104,7 @@ footer {
 
 /* Right-side buttons */
 .mega-actions {
+    margin-top: 30px;
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -129,26 +126,13 @@ footer {
     color: white;
 }
 
-/* Responsive */
-@media (max-width: 900px) {
-    .mega-menu {
-        flex-direction: column;
-    }
-
-    .mega-actions {
-        align-items: flex-start;
-    }
+.footer-bottom {
+    background-color: #cad0d2;
+    text-align: center;
+    padding: 15px;
+    font-size: 14px;
 }
-@media (max-width: 500px) {
-    .mega-column {
-        min-width: 100%;
-    }
 
-    .btn-outline {
-        width: 100%;
-        text-align: center;
-    }
-}
 h2{
     color: #00274e;
 }

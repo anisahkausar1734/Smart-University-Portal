@@ -12,22 +12,15 @@
             background-color: #f2f2f2;
         }
 
-        /* HEADER */
         header {
             background-color: #003366;
             color: white;
             padding: 15px;
         }
 
-        header img {
-            float: right;
-            width: 170px;
-            margin: 10px;
-        }
-
         nav a {
             color: white;
-            margin-right: 18px;
+            margin-right: 15px;
             text-decoration: none;
             font-weight: bold;
         }
@@ -102,11 +95,82 @@
         }
 
         footer {
-            background-color: #eee;
-            text-align: center;
-            padding: 12px;
-            margin-top: 40px;
-        }
+    background-color: #d8d1d1;
+    text-align: center;
+    padding: 10px;
+    margin-top: 20px;
+}
+
+.footer {
+    background-color: #cad0d2;
+    color: rgb(19, 16, 16);
+    padding-top: 40px;
+}
+
+.mega-menu {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    padding: 10px 60px 35px;
+    background: #cad0d2;
+    flex-wrap: wrap;
+    margin-top: 0;
+}
+
+/* Columns */
+.mega-column {
+    min-width: 180px;
+}
+
+.mega-column h3 {
+    font-size: 20px;
+    margin-bottom: 15px;
+    color: #111;
+}
+
+.mega-column a {
+    display: block;
+    text-decoration: none;
+    color: #333;
+    margin-bottom: 12px;
+    font-size: 15px;
+}
+
+.mega-column a:hover {
+    color: #4e477d;
+}
+
+/* Right-side buttons */
+.mega-actions {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: flex-start;
+}
+
+.btn-outline {
+    padding: 14px 22px;
+    border: 2px solid #1a166b;
+    color: #1a166b;
+    text-decoration: none;
+    font-weight: bold;
+    text-align: center;
+    width: 230px;
+}
+
+.btn-outline:hover {
+    background: #333360;
+    color: white;
+}
+
+.footer-bottom {
+    background-color: #cad0d2;
+    text-align: center;
+    padding: 15px;
+    font-size: 14px;
+}
+
 
         @media (max-width: 600px) {
             header {
@@ -130,7 +194,8 @@
 <body>
 
 <header>
-    <img src="images/mituni.png" alt="Smart University Logo">
+    <img src="images/mituni.png" alt="Smart University Logo" width="175" style="float: right; margin: 20px;">
+
     <h1>Smart University</h1>
     <p>Knowledge • Innovation • Excellence</p>
 
@@ -205,9 +270,55 @@
     </div>
 </section>
 
-<footer>
-    <p>&copy; 2026 Smart University</p>
+<footer class="footer">
+
+    <section class="mega-menu">
+
+        <div class="mega-column">
+            <h3>Study</h3>
+            <a href="#">Programs</a>
+            <a href="#">Admissions</a>
+            <a href="#">Dates and Deadlines</a>
+        </div>
+
+        <div class="mega-column">
+            <h3>Research</h3>
+            <a href="#">Directorate of Research</a>
+            <a href="#">Research Collaborations</a>
+            <a href="#">SU Research Portal</a>
+        </div>
+
+        <div class="mega-column">
+            <h3>Discover</h3>
+            <a href="#">About Us</a>
+            <a href="#">Disclaimer</a>
+            <a href="#">Career</a>
+            <a href="#">Leadership</a>
+            <a href="#">Ranking & Recognition</a>
+        </div>
+
+        <div class="mega-column">
+            <h3>Related Links</h3>
+            <a href="#">Terms and Conditions</a>
+            <a href="#">Contact Us</a>
+            <a href="#">Application Status</a>
+            <a href="#">Policies</a>
+            <a href="#">Privacy & Cookie Policy</a>
+        </div>
+
+        <div class="mega-actions">
+            <a class="btn-outline" href="forms.html">APPLY FOR ADMISSIONS</a>
+            <a class="btn-outline" href="#">DOWNLOAD PROSPECTUS</a>
+        </div>
+
+    </section>
+
+    <div class="footer-bottom">
+        <p>&copy; 2026 Smart University</p>
+    </div>
+
 </footer>
+
 
 </body>
 </html>
