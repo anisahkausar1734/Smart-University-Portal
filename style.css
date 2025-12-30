@@ -1,27 +1,276 @@
-.header-class {
-    display: flex;
-    align-items: center;
-    justify-content: left;
-    padding: 10px 40px;
-    gap: 40px;
+body {
+    background-color: white;
 }
-.navbar {
-    display: flex; 
-    justify-content: center; 
-    gap: 40px;
-    padding-left: 100px;
+a {
+    text-decoration: none;
+}
+h1 {
+    font-family: "Allan", serif;
+    font-weight: 700;
+    font-style: normal;
+    color: rgb(15, 40, 84);
+
 }
 
-.aulogo {
-    border-radius: 100%;
-    background-color: black;
+.logoName {
+    display: inline-flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: start;
+
 }
-main {
-    padding: 20px;
+.categories {
+    display: inline-flex;
+    gap: 70px;
+    font-size: 1.5rem;
+    
+    
 }
-* {
-    background-color: rgb(249, 228, 159);
+.option {
+    text-decoration: none;
+    color: rgb(15, 40, 84);
 }
-.text-body-secondary {
-    font-weight: 600;
+.theHeader {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgb(189, 232, 245);
+    border-radius: 5px;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+/* Hamburger Menu Styles */
+.menu-toggle {
+    display: none;
+    font-size: 1.8rem;
+    color: rgb(15, 40, 84);
+    cursor: pointer;
+    padding: 10px;
+}
+
+.theFooter {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 80px;
+    align-items: end;
+    background-color: rgb(189, 232, 245);
+    border-radius: 5px;
+    padding-left: 5px;
+    padding-right: 5px;
+    
+}
+.columnData {
+    color: rgb(15, 40, 84);
+}
+.columnHeading {
+    color: rgb(15, 40, 84);
+}
+.baseFooter {
+    width: 100%;
+    text-align: center;
+    color: rgb(15, 40, 84);
+}
+.theFooter a {
+    text-decoration: none;
+}
+.heroSection {
+    position: relative;
+    height: 500px;
+    padding: 40px;          /* 👈 THIS FIXES IT */
+    overflow: hidden;
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    height: 500px;
+    position: relative;
+    font-size: 3rem;
+    color: rgb(73, 136, 196);
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 400;
+    overflow: hidden;
+    font-style: normal;
+}
+.heroSection::before {
+    background-image: url('./assets/images/heroBackDrop.jpg');
+    background-size: 100% 100%;
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    z-index: -1;
+    filter: blur(5px);
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+
+
+}
+
+.heroTagLine {
+    filter: blur(0px);
+    z-index: 1;
+    position: relative;
+    margin-bottom: 0px;
+}
+.heroSubTag {
+    color: rgb(255, 152, 106);
+    margin-top: 0px;
+    font-size: 2rem;
+    font-weight: 700;
+}
+.heroContent {
+    color: rgb(249, 90, 21);
+    text-align: left;
+}
+.textContent {
+    width: 1000px;
+}
+.applyNow {
+    text-align: center;
+    font-family: cursive;
+    font-size: 3rem;
+    color: rgb(73, 136, 196);
+    height: 80px;
+    border-radius: 30px;
+    border: 10px solid rgb(241, 109, 52);
+    background-color: rgb(189, 232, 245);
+}
+.newsHeading {
+    color: rgb(29, 78, 78);
+    font-size: 50px;
+}
+.newsList {
+    font-size: 30px;
+    color: rgb(29, 78, 78);
+}
+
+
+----------------------------------------------
+
+.startbgp {
+    background-image: url('./assets/images/heroBackDrop.jpg');
+    ;
+}
+
+.HW {
+    margin: 130px;
+}
+
+/* Media Query for Mobile Responsiveness */
+@media screen and (max-width: 768px) {
+    .theHeader {
+        flex-wrap: wrap;
+        position: relative;
+    }
+    
+    .logoName h1 {
+        font-size: 1.2rem;
+    }
+    
+    .menu-toggle {
+        display: block;
+        order: 3;
+    }
+    
+    .categories {
+        position: fixed;
+        top: 0;
+        right: -200px;
+        width: 200px;
+        height: 100vh;
+        background-color: rgb(189, 232, 245);
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        padding-top: 60px;
+        gap: 30px;
+        transition: right 0.3s ease;
+        z-index: 1000;
+    }
+    
+    .endCategory {
+        position: absolute;
+        top: 280px;
+        right: -200px;
+        transition: right 0.3s ease;
+        z-index: 1000;
+    }
+    
+    .categories.active {
+        right: 0;
+    }
+    
+    .endCategory.active {
+        right: 50px;
+    }
+    
+    .heroSection {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 20px;
+        gap: 20px;
+    }
+    
+    .textContent {
+        width: 100%;
+        max-width: 100%;
+    }
+    
+    .heroTagLine {
+        font-size: 2rem;
+    }
+    
+    .heroSubTag {
+        font-size: 1.5rem;
+    }
+    
+    .applyNow {
+        font-size: 1.5rem;
+        height: 60px;
+        padding: 10px;
+    }
+    
+    .newsHeading {
+        font-size: 35px;
+    }
+    
+    .newsList {
+        font-size: 20px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .logoName h1 {
+        font-size: 1rem;
+    }
+    
+    .heroSection {
+        padding: 15px;
+        height: auto;
+        min-height: 400px;
+    }
+    
+    .heroTagLine {
+        font-size: 1.5rem;
+    }
+    
+    .heroSubTag {
+        font-size: 1.2rem;
+    }
+    
+    .applyNow {
+        font-size: 1.2rem;
+        height: 50px;
+    }
+    
+    .newsHeading {
+        font-size: 25px;
+    }
+    
+    .newsList {
+        font-size: 16px;
+    }
 }
